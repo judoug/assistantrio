@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Rio</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="A private assistant.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" type="image/png" sizes="512x512" href="rio-favicon.png" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/png" sizes="512x512" href="rio-favicon-reversed.png" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" sizes="512x512" href="rio-favicon.png">
+<link rel="apple-touch-icon" sizes="512x512" href="rio-favicon.png">
+<style>
+  :root{
+    --bg:#F2EFE7;
+    --hero:#3D5246;
+    --hero-text:#F4F1E7;
+    --ink:#1F2420;
+    --body:#4A4F47;
+    --muted:#7A6B4F;
+    --rule:#C9C1AC;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#1A1C19;
+      --hero:#324239;
+      --hero-text:#ECE7DA;
+      --ink:#ECE7DA;
+      --body:#B8B2A1;
+      --muted:#8A7F66;
+      --rule:#414537;
+    }
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:"Inter","Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    min-height:100vh;
+    display:grid;
+    grid-template-rows:1fr auto;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    font-variant-numeric:tabular-nums;
+  }
+  main{
+    display:grid;
+    place-items:center;
+    padding:48px 32px;
+  }
+  .stage{
+    max-width:440px;
+    width:100%;
+    text-align:center;
+  }
+  .mark{
+    width:160px;
+    height:160px;
+    margin:0 0 24px;
+    display:inline-block;
+    image-rendering:auto;
+    content:url("rio-mark.png");
+  }
+  @media (prefers-color-scheme: dark){
+    .mark{content:url("rio-mark-reversed.png")}
+  }
+  .name{
+    font-size:40px;
+    font-weight:600;
+    letter-spacing:-0.6px;
+    line-height:1;
+    margin:0 0 14px;
+    color:var(--hero);
+  }
+  @media (prefers-color-scheme: dark){
+    .name{color:#9CAB8E}
+  }
+  .desc{
+    font-size:15px;
+    line-height:1.55;
+    color:var(--body);
+    margin:0 auto 56px;
+    max-width:30ch;
+  }
+  .rule{
+    width:28px;
+    height:1px;
+    background:var(--rule);
+    margin:0 auto 28px;
+    border:0;
+  }
+  blockquote{
+    font-size:14px;
+    line-height:1.6;
+    font-style:italic;
+    color:var(--body);
+    margin:0 auto 12px;
+    max-width:36ch;
+  }
+  .cite{
+    font-size:10px;
+    letter-spacing:2.4px;
+    text-transform:uppercase;
+    color:var(--muted);
+    font-weight:500;
+  }
+  footer{
+    padding:20px 32px;
+    text-align:center;
+    font-size:10px;
+    letter-spacing:2.4px;
+    text-transform:uppercase;
+    color:var(--muted);
+    font-weight:500;
+  }
+</style>
+</head>
+<body>
+  <main>
+    <div class="stage">
+      <img class="mark" src="rio-mark.png" alt="Rio" width="160" height="160" decoding="async">
+      <h1 class="name">Rio</h1>
+      <p class="desc">A private assistant. Built for one person.</p>
+      <hr class="rule">
+      <blockquote>&ldquo;We suffer more often in imagination than in reality.&rdquo;</blockquote>
+      <p class="cite">Seneca</p>
+    </div>
+  </main>
+  <footer>assistantrio.com</footer>
+</body>
+</html>
